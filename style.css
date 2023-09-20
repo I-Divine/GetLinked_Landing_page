@@ -16,6 +16,7 @@ a {
   text-decoration: none;
 }
 .navbar {
+  font-family: "monteserrat", sans-serif;
   display: flex;
   width: 719px;
   font-size: 16px;
@@ -33,6 +34,7 @@ a {
 }
 
 .headerContainer h1 {
+  font-family: "Clash Display", sans-serif;
   color: white;
   font-size: 36px;
   margin: 0;

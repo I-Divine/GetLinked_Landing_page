@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form Submission</title>
   </head>
   <body>
     <header class="headerContainer">
@@ -16,24 +14,49 @@
         <button class="register-btn">Register</button>
       </nav>
     </header>
-    <main>
-      <section></section>
-      <section>
-        <form action="">
-          <h2>Questions or need assistance?</h2>
-          <h2>Let us know it</h2>
-          <input type="text" placeholder="First Name" value="name" />
-          <input type="email" placeholder="Mail" value="email" />
-          <textarea
-            id=""
-            placeholder="Message"
-            value="message"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <!-- <input type=""> -->
-        </form>
-      </section>
-    </main>
+    <form id="myForm">
+      <input placeholder="Email" type="text" name="email" value="" />
+      <input
+        placeholder="phone number"
+        type="tel"
+        name="phone_number"
+        value=""
+      />
+      <input placeholder="first name" type="text" name="first_name" value="" />
+      <textarea
+        placeholder="message"
+        name="message"
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+      <!-- Add more form fields as needed -->
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+      function submitForm() {
+        var form = document.getElementById("myForm");
+        var formData = new FormData(form);
+        console.log(formData);
+        fetch("https://backend.getlinked.ai/hackathon/contact-form", {
+          method: "POST",
+          body: formData,
+        })
+          .then(function (response) {
+            if (response.ok) {
+              console.log("POST request successful");
+              return response.text();
+            }
+            throw new Error("POST request failed");
+          })
+          .then(function (data) {
+            console.log("Response:", data);
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
+      }
+    </script>
   </body>
 </html>
