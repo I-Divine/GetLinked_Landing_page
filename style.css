@@ -1,10 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  /* background: url(./assets/Purple-Lens-Flare-PNG.png) no-repeat 240px left; */
   font-family: sans-serif;
   background-color: #150e28;
 }
 hr {
+  margin: 0px;
   color: white;
   height: 1px;
   border-bottom: none;
@@ -16,7 +18,7 @@ a {
   text-decoration: none;
 }
 .navbar {
-  font-family: "monteserrat", sans-serif;
+  font-family: "Monteserrat", sans-serif;
   display: flex;
   width: 719px;
   font-size: 16px;
@@ -43,12 +45,14 @@ a {
 h2 {
   margin: 0;
 }
-.register-btn {
+.register-btn,
+.readmore-btn {
   font-size: 16px;
   width: 172px;
   height: 53px;
   cursor: pointer;
   border-radius: 5px;
+  font-family: "Monteserrat", sans-serif;
   /* padding: 15px 20px; */
   background-image: linear-gradient(to right, #d434fe, #903aff);
   color: white;
@@ -61,17 +65,131 @@ h2 {
 }
 #main > h2 {
   text-align: right;
+  font-family: "Monteserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 36px;
+}
+#main article p {
+  font-family: "Monteserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+#main .register-btn {
+  margin-top: 50px;
 }
 #main article {
+  margin-top: 100px;
   width: 700px;
 }
 #main article h2 > span {
   color: #d434fe;
 }
 #main article h2 {
+  font-family: "Clash Display", sans-serif;
   font-size: 80px;
+  /* margin-top: 50px; */
+}
+section {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+#main .smart_glasses_image {
+  position: absolute;
+  z-index: -10;
+  /* left: 600px; */
+  bottom: 0px;
+  right: 0px;
+  /* top: 50px; */
+  width: 700px;
 }
 section {
   color: #fff;
+  position: relative;
   padding: 20px 128px;
+}
+.timer span {
+  font-family: "Unica One", cursive;
+  font-size: 64px;
+  line-height: 85px;
+}
+.timer {
+  font-size: 14px;
+  font-family: "Monteserrat", sans-serif;
+  line-height: 18px;
+  margin-top: 70px;
+}
+
+.intro {
+  column-gap: 50px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 550px 550px;
+}
+.colored-one {
+  color: #d434fe;
+}
+.intro h2 {
+  font-size: 32px;
+  font-family: "Clash Display", sans-serif;
+}
+.intro p {
+  line-height: 27px;
+  font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
+}
+.intro article {
+  margin-top: 150px;
+}
+.flare {
+  position: absolute;
+}
+.rules {
+  column-gap: 50px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 550px 550px;
+}
+.rules h2 {
+  font-size: 32px;
+  font-family: "Clash Display", sans-serif;
+}
+.rules p {
+  line-height: 27px;
+  font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
+}
+.rules article {
+  margin-top: 150px;
+}
+.judging_criteria > img {
+  position: relative;
+  right: 100px;
+  margin-top: 100px;
+}
+.judging_criteria {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 550px 550px;
+  column-gap: 50px;
+}
+.judging_criteria h2 {
+  font-size: 32px;
+  font-family: "Clash Display", sans-serif;
+}
+.judging_criteria p span {
+  color: #ff26b9;
+}
+.judging_criteria p {
+  line-height: 27px;
+  font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
 }
