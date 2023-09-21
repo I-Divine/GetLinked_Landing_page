@@ -196,12 +196,26 @@ section {
   padding: 5px;
   font-family: "Monteserrat", sans-serif;
 }
+.FAQs-image {
+  position: relative;
+  right: 90px;
+}
+.FAQs .content p {
+  font-size: 14px;
+  list-style-position: inside;
+  line-height: 27px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px #d434fe solid;
+}
 .FAQs {
-  margin-top: 50px;
+  margin-top: 200px;
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: 550px 550px;
-  column-gap: 50px;
+  /* justify-content: space-between; */
+  grid-template-columns: 420px 550px;
+  column-gap: 150px;
 }
 .FAQs h2 {
   font-size: 32px;
