@@ -1,6 +1,8 @@
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  width: 100vw;
   /* background: url(./assets/Purple-Lens-Flare-PNG.png) no-repeat 240px left; */
   font-family: sans-serif;
   background-color: #150e28;
@@ -145,6 +147,7 @@ section {
   margin-top: 150px;
 }
 .flare {
+  z-index: -20;
   position: absolute;
 }
 .rules {
@@ -188,6 +191,26 @@ section {
   color: #ff26b9;
 }
 .judging_criteria p {
+  line-height: 27px;
+  font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
+}
+.FAQs {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 550px 550px;
+  column-gap: 50px;
+}
+.FAQs h2 {
+  font-size: 32px;
+  font-family: "Clash Display", sans-serif;
+}
+.FAQs p span {
+  color: #ff26b9;
+}
+.FAQs p {
   line-height: 27px;
   font-size: 14px;
   padding: 5px;
