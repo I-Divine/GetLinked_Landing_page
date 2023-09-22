@@ -2,21 +2,35 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-    <title>Form Submission</title>
+    <title>Contact</title>
   </head>
   <body>
     <header class="headerContainer">
       <h1>get<span>linked</span></h1>
       <nav class="navbar">
-        <a href="">Timeline</a>
-        <a href="">Overview</a>
-        <a href="">FAQs</a>
-        <a href="">Contact</a>
-        <button class="register-btn">Register</button>
+        <a href="./index.html#timeline">Timeline</a>
+        <a href="./index.html#overview">Overview</a>
+        <a href="./index.html#FAQs">FAQs</a>
+        <a href="" class="active">Contact</a>
+        <a href="./register_page.html"
+          ><button class="register-btn">Register</button></a
+        >
       </nav>
     </header>
     <main class="contactMain">
-      <div></div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>Contact <br />Information</p>
+        <p>
+          27,Alara Street, <br />Yaba 100012, <br />
+          Lagos State
+        </p>
+        <p>Call Us : 07067981819</p>
+        <p>we are open from Monday-Friday <br />08:00am - 05:00pm</p>
+        <p class="colored-one">Share on</p>
+        <img src="./assets/Social media (1).svg" alt="" />
+      </div>
+
       <form id="myForm">
         <img
           src="./assets/Purple-Lens-Flare-PNG (1).png"
@@ -54,8 +68,10 @@
     <script>
       function submitForm() {
         var form = document.getElementById("myForm");
+
         var formData = new FormData(form);
         console.log(formData);
+        form.reset();
         fetch("https://backend.getlinked.ai/hackathon/contact-form", {
           method: "POST",
           body: formData,

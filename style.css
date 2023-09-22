@@ -51,7 +51,8 @@ h2 {
   margin: 0;
 }
 .register-btn,
-.readmore-btn {
+.readmore-btn,
+button {
   font-size: 16px;
   width: 172px;
   height: 53px;
@@ -233,6 +234,7 @@ section {
   padding: 5px;
   font-family: "Monteserrat", sans-serif;
 }
+
 .timeline > article {
   display: grid;
   column-gap: 40px;
@@ -288,8 +290,11 @@ section {
   background: url(./assets/premium_photo-1664443577580-dd2674e9d359\ 1.png);
   background-size: 1512px 950px;
 }
-.partners p{
+.partners p {
+  line-height: 27px;
   font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
 }
 .partners h2 {
   font-size: 32;
@@ -297,9 +302,45 @@ section {
   font-weight: 700;
 }
 .partners {
+  margin-bottom: 100px;
   text-align: center;
 }
-/* contact page  */
+.policies > article li,
+.policies > article p {
+  line-height: 27px;
+  font-size: 14px;
+  padding: 5px;
+  font-family: "Monteserrat", sans-serif;
+}
+.policies > article > div h2 {
+  font-size: 16px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 700;
+}
+.policies > article > div {
+  width: 570px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.025);
+  border-radius: 4px;
+  border: 1px solid #d434fe;
+}
+.policies > article > h2 {
+  font-size: 32px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 700;
+}
+.policies .policies-img {
+  margin-left: 50px;
+  margin-top: 150px;
+}
+.policies {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 550px 550px;
+}
+/*--- 
+contact page  
+---*/
 .contactMain form button {
   font-size: 16px;
   width: 172px;
@@ -313,11 +354,17 @@ section {
   margin-top: 50px;
 }
 
+.contactMain form h2 {
+  font-size: 20px;
+  line-height: 25px;
+}
 .contactMain form {
+  /* height: 610px; */
   background-color: rgba(255, 255, 255, 0.025);
   border-radius: 4px;
   padding: 50px;
   display: grid;
+  grid-template-columns: 100%;
   justify-content: center;
 }
 .contactMain form input {
@@ -342,7 +389,7 @@ section {
   margin-top: 40px;
   border-radius: 4px;
   width: 40;
-  height: 120;
+  height: 100;
   padding: 20px;
 }
 ::placeholder {
@@ -354,7 +401,66 @@ section {
   color: #d434fe;
   font-family: "Clash Display", sans-serif;
 }
+.contactMain p {
+  line-height: 20px;
+  font-size: 16px;
+  padding: 5px;
+  color: #fff;
+  font-family: "Monteserrat", sans-serif;
+}
+
+.contactMain .colored-one {
+  color: #d434fe;
+}
+.contactMain > div img {
+  cursor: pointer;
+}
+.contactMain > div {
+  margin-top: 100px;
+}
 .contactMain {
   display: grid;
+  /* align-content: baseline; */
+  margin: 50px 150px;
   grid-template-columns: 550px 620px;
+}
+.active {
+  color: linear-gradient(to right, #d434fe, #903aff);
+}
+
+/* register page */
+
+.register-main .form-container {
+  display: grid;
+  column-gap: 20px;
+  /* margin: 50px 150px; */
+  grid-template-columns: 40% 40%;
+}
+.register-main form label {
+  margin-top: 30px;
+}
+.register-main form input {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  font-family: "Monteserrat", sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+.register-main form {
+  color: white;
+}
+.register-main form > h2 {
+  color: #d434fe;
+}
+.register-main {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  /* justify-content: space-between; */
+  column-gap: 50px;
+  margin: 50px 50px;
 }
