@@ -15,27 +15,41 @@
         <button class="register-btn">Register</button>
       </nav>
     </header>
-    <form id="myForm">
-      <h2>Questions or need assistance ?</h2>
-      <h2>Let us know!</h2>
-      <input placeholder="Email" type="text" name="email" value="" />
-      <input
-        placeholder="phone number"
-        type="tel"
-        name="phone_number"
-        value=""
-      />
-      <input placeholder="first name" type="text" name="first_name" value="" />
-      <textarea
-        placeholder="message"
-        name="message"
-        id=""
-        cols="30"
-        rows="10"
-      ></textarea>
-      <!-- Add more form fields as needed -->
-      <button type="button" onclick="submitForm()">Submit</button>
-    </form>
+    <main class="contactMain">
+      <div></div>
+      <form id="myForm">
+        <img
+          src="./assets/Purple-Lens-Flare-PNG (1).png"
+          style="position: absolute; right: -400px"
+          alt=""
+          class="flare"
+        />
+        <h2>Questions or need assistance ?</h2>
+        <h2>Let us know!</h2>
+        <input placeholder="Email" type="text" name="email" value="" />
+        <input
+          placeholder="phone number"
+          type="tel"
+          name="phone_number"
+          value=""
+        />
+        <input
+          placeholder="first name"
+          type="text"
+          name="first_name"
+          value=""
+        />
+        <textarea
+          placeholder="message"
+          name="message"
+          id=""
+          cols="10"
+          rows="5"
+        ></textarea>
+        <!-- Add more form fields as needed -->
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+    </main>
 
     <script>
       function submitForm() {

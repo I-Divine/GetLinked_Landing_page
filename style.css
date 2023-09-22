@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   overflow-x: hidden;
   margin: 0;
@@ -229,4 +232,129 @@ section {
   font-size: 14px;
   padding: 5px;
   font-family: "Monteserrat", sans-serif;
+}
+.timeline > article {
+  display: grid;
+  column-gap: 40px;
+  align-content: end;
+  grid-template-columns: 390px 50px 390px;
+  grid-template-rows: 30px 30px 30px 30px 30px 30px;
+}
+.timeline {
+  display: grid;
+  /* grid-template-columns: 100%; */
+  justify-content: center;
+}
+.timeline h2,
+.timeline h3 {
+  color: #d434fe;
+  /* margin: 50px; */
+}
+.timeline .num {
+  background-image: linear-gradient(to right, #d434fe, #903aff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Monteserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.timeline .left-side {
+  text-align: right;
+}
+.timeline .right-side {
+  text-align: left;
+}
+
+.prizes > div {
+  display: flex;
+  margin: 100px 0px 100px 0px;
+}
+.prizes article {
+  margin-top: 100px;
+  margin-left: 45vw;
+}
+.prizes h2 {
+  font: "Clash Display", sans-serif;
+  weight: 700;
+  font-size: 32px;
+  line-height: 39.36px;
+}
+.prizes {
+  background: url(./assets/premium_photo-1664443577580-dd2674e9d359\ 1.png);
+  background-size: 1512px 950px;
+}
+.partners p{
+  font-size: 14px;
+}
+.partners h2 {
+  font-size: 32;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 700;
+}
+.partners {
+  text-align: center;
+}
+/* contact page  */
+.contactMain form button {
+  font-size: 16px;
+  width: 172px;
+  height: 53px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Monteserrat", sans-serif;
+  /* padding: 15px 20px; */
+  background-image: linear-gradient(to right, #d434fe, #903aff);
+  color: white;
+  margin-top: 50px;
+}
+
+.contactMain form {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-radius: 4px;
+  padding: 50px;
+  display: grid;
+  justify-content: center;
+}
+.contactMain form input {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  font-family: "Monteserrat", sans-serif;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+  /* margin-bottom: 50px; */
+}
+.contactMain form textarea {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  color: white;
+  font-family: "Monteserrat", sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+  border-radius: 4px;
+  width: 40;
+  height: 120;
+  padding: 20px;
+}
+::placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+.contactMain h2 {
+  font-size: 32px;
+  color: #d434fe;
+  font-family: "Clash Display", sans-serif;
+}
+.contactMain {
+  display: grid;
+  grid-template-columns: 550px 620px;
 }
