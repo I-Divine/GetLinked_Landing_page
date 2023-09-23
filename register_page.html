@@ -7,6 +7,17 @@
     <title>Register</title>
   </head>
   <body>
+    <div id="modal-container" style="display: none">
+      <div id="modal">
+        <img src="./assets/congratulation.png" alt="" />
+        <h2>Congratulation you have successfully registered!</h2>
+        <p>
+          Yes it was easy and you did it check your mail box for the next step
+        </p>
+        <button onclick="turnOffVisibility()">back</button>
+      </div>
+    </div>
+
     <header class="headerContainer">
       <h1>get<span>linked</span></h1>
       <nav class="navbar">
@@ -26,24 +37,48 @@
           alt=""
         />
       </div>
-      <form action="">
+      <form action="" id="myForm">
         <h2>Register</h2>
         <h4>Be part of this movement</h4>
         <h3>Create Your Account</h3>
         <div class="form-container">
-          <label for="">Team's Name<br /><input type="text" name="" /></label>
-          <label for="">Phone<br /><input type="text" name="" /></label>
-          <label for="">Email<br /><input type="text" name="" /></label>
           <label for=""
-            >Project Topics<br /><input type="text" name=""
+            >Team's Name<br /><input type="text" name="team_name"
           /></label>
           <label for=""
-            >Category<br /><input type="text" name="" list="categories"
+            >Phone<br /><input type="tel" name="phone_number"
+          /></label>
+          <label for="">Email<br /><input type="email" name="email" /></label>
+          <label for=""
+            >Project Topics<br /><input type="text" name="project_topic"
           /></label>
           <label for=""
-            >Group Size<br /><input type="text" name="" list="group-size"
+            >Category<br /><input type="text" name="category" list="categories"
+          /></label>
+          <label for=""
+            >Group Size<br /><input
+              type="text"
+              name="group_size"
+              list="group-size"
           /></label>
         </div>
+        <p
+          style="
+            color: #ff26b9;
+            font-style: italic;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            line-height: 12px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+          "
+        >
+          Please review your registration details before submitting
+        </p>
+        <label for="">
+          <input type="checkbox" name="privacy_policy_accepted" id="" />
+          I agreed with the event terms and conditions and privacy policy
+        </label>
         <datalist id="categories"></datalist>
         <datalist id="group-size">
           <option value="2"></option>
@@ -51,57 +86,14 @@
           <option value="4"></option>
           <option value="5"></option>
           <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+          <option value="9"></option>
+          <option value="10"></option>
         </datalist>
+        <button onclick="submitForm()">Register Now</button>
       </form>
-      <script>
-        function populateDatalist() {
-          const url = "https://backend.getlinked.ai/hackathon/categories-list";
-
-          fetch(url)
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network was not ok");
-              }
-              return response.json();
-            })
-            .then((data) => {
-              const datalist = document.getElementById("categories");
-              console.log(data);
-              data.forEach((element) => {
-                const suggestion = document.createElement("option");
-                suggestion.value = element.name;
-                datalist.appendChild(suggestion);
-                console.log(element);
-                console.log(datalist);
-              });
-            });
-        }
-        populateDatalist();
-        function submitForm() {
-          var form = document.getElementById("myForm");
-
-          var formData = new FormData(form);
-          console.log(formData);
-          form.reset();
-          fetch("https://backend.getlinked.ai/hackathon/contact-form", {
-            method: "POST",
-            body: formData,
-          })
-            .then(function (response) {
-              if (response.ok) {
-                console.log("POST request successful");
-                return response.text();
-              }
-              throw new Error("POST request failed");
-            })
-            .then(function (data) {
-              console.log("Response:", data);
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
-        }
-      </script>
+      <script src="./index.js"></script>
     </main>
   </body>
 </html>

@@ -5,6 +5,16 @@
     <title>Contact</title>
   </head>
   <body>
+    <div id="modal-container" style="display: none">
+      <div id="modal">
+        <img src="./assets/congratulation.png" alt="" />
+        <h2>Congratulation you have successfully registered!</h2>
+        <p>
+          Yes it was easy and you did it check your mail box for the next step
+        </p>
+        <button onclick="turnOffVisibility()">back</button>
+      </div>
+    </div>
     <header class="headerContainer">
       <h1>get<span>linked</span></h1>
       <nav class="navbar">
@@ -65,31 +75,6 @@
       </form>
     </main>
 
-    <script>
-      function submitForm() {
-        var form = document.getElementById("myForm");
-
-        var formData = new FormData(form);
-        console.log(formData);
-        form.reset();
-        fetch("https://backend.getlinked.ai/hackathon/contact-form", {
-          method: "POST",
-          body: formData,
-        })
-          .then(function (response) {
-            if (response.ok) {
-              console.log("POST request successful");
-              return response.text();
-            }
-            throw new Error("POST request failed");
-          })
-          .then(function (data) {
-            console.log("Response:", data);
-          })
-          .catch(function (error) {
-            console.error(error);
-          });
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
